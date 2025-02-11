@@ -1,4 +1,4 @@
-# Cloudflare Workers + Replicate
+# Getting started with Cloudflare Workers and Replicate
 
 This is a template for a simple web app using [Cloudflare Workers](https://developers.cloudflare.com/workers/), [Hono](https://honojs.dev/), and [Replicate](https://replicate.com/) to generate images using [Flux Schnell](https://replicate.com/black-forest-labs/flux-schnell), a fast and high-quality open-source image generation model.
 
