@@ -3,6 +3,24 @@ const ImageGenerator = () => {
   const [images, setImages] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
 
+  const samplePrompts = [
+    "cats riding bikes on the boardwalk",
+    "mice playing poker",
+    "dogs riding motorcycles in the desert",
+    "penguins having a tea party",
+    "rabbits playing basketball"
+  ];
+
+  const getRandomPrompt = () => {
+    const randomIndex = Math.floor(Math.random() * samplePrompts.length);
+    return samplePrompts[randomIndex];
+  };
+
+  React.useEffect(() => {
+    // Set a random prompt when component mounts
+    setPrompt(getRandomPrompt());
+  }, []);
+
   const generateImage = async () => {
     try {
       setLoading(true);
