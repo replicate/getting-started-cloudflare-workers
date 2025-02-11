@@ -1,5 +1,7 @@
 # Getting started with Cloudflare Workers and Replicate
 
+[![Open Val Town Template](https://stevekrouse-badge.web.val.run/)](https://www.val.town/x/stevekrouse/replicate_starter)
+
 This is a template for a simple web app using [Cloudflare Workers](https://developers.cloudflare.com/workers/), [Hono](https://honojs.dev/), and [Replicate](https://replicate.com/) to generate images using [Flux Schnell](https://replicate.com/black-forest-labs/flux-schnell), a fast and high-quality open-source image generation model.
 
 ![screenshot](https://github.com/user-attachments/assets/f123b271-09a1-468c-9aac-5fdd4ed75184)
