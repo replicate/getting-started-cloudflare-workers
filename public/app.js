@@ -5,10 +5,20 @@ const ImageGenerator = () => {
 
   const samplePrompts = [
     "cats riding bikes on the boardwalk",
-    "mice playing poker",
+    "mice playing poker", 
     "dogs riding motorcycles in the desert",
     "penguins having a tea party",
-    "rabbits playing basketball"
+    "rabbits playing basketball",
+    "giraffes dancing ballet in tutus",
+    "elephants painting masterpieces",
+    "monkeys having a beach party",
+    "pandas practicing kung fu",
+    "owls teaching mathematics",
+    "hippos ice skating gracefully",
+    "kangaroos playing soccer",
+    "sloths racing Formula 1 cars",
+    "turtles hosting a cooking show",
+    "flamingos performing in a rock band"
   ];
 
   const getRandomPrompt = () => {
@@ -49,6 +59,11 @@ const ImageGenerator = () => {
     e.preventDefault();
     if (!loading && prompt) {
       generateImage();
+      
+      // Set a new random prompt after submission, unless user has entered a custom prompt
+      if (samplePrompts.includes(prompt)) {
+        setPrompt(getRandomPrompt());
+      }
     }
   };
 
@@ -59,11 +74,10 @@ const ImageGenerator = () => {
       </h1>
 
       <p className="text-center text-gray-600 mb-8">
-        Use{" "}
-        <a href="https://developers.cloudflare.com/workers/" target="_blank" rel="noopener noreferrer" className="text-gray-800 underline">Cloudflare</a>,{" "}
-        <a href="https://honojs.dev/" target="_blank" rel="noopener noreferrer" className="text-gray-800 underline">Hono</a>,{" "}
-        <a href="https://replicate.com/" target="_blank" rel="noopener noreferrer" className="text-gray-800 underline">Replicate</a>,{" "}
-        and <a href="https://replicate.com/black-forest-labs/flux-schnell" target="_blank" rel="noopener noreferrer" className="text-gray-800 underline">Flux</a> to generate images.
+        Generate images with{" "}
+        <a href="https://replicate.com/black-forest-labs/flux-schnell" target="_blank" rel="noopener noreferrer" className="text-gray-800 underline">Flux</a> on{" "}
+        <a href="https://replicate.com/" target="_blank" rel="noopener noreferrer" className="text-gray-800 underline">Replicate</a>, and host it on{" "}
+        <a href="https://developers.cloudflare.com/workers/" target="_blank" rel="noopener noreferrer" className="text-gray-800 underline">Cloudflare Workers</a>.
       </p>
 
       <form onSubmit={handleSubmit} className="flex gap-4 justify-center mb-8">
@@ -72,12 +86,12 @@ const ImageGenerator = () => {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           placeholder="Enter your image prompt"
-          className="flex-1 max-w-lg px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="flex-1 max-w-lg px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
         />
         <button
           type="submit"
           disabled={loading || !prompt}
-          className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+          className="px-6 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
         >
           {loading ? 'Generating...' : 'Generate Image'}
         </button>
@@ -90,9 +104,8 @@ const ImageGenerator = () => {
               alt={image.prompt}
               className="rounded-md w-full mb-2"
             />
-            <div className="flex justify-between items-center">
-              <p className="text-gray-700 font-medium">"{image.prompt}"</p>
-              <span className="text-sm text-gray-500">{image.timestamp}</span>
+            <div>
+              <p className="text-gray-700 font-medium text-center">"{image.prompt}"</p>
             </div>
           </div>
         ))}
