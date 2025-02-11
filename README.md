@@ -1,4 +1,4 @@
-# Cloudflare + Hono + Replicate 
+# Cloudflare Workers Template App
 
 This is a template for a simple web app using [Cloudflare Workers](https://developers.cloudflare.com/workers/), [Hono](https://honojs.dev/), and [Replicate](https://replicate.com/) to generate images using [Flux Schnell](https://replicate.com/black-forest-labs/flux-schnell), a fast and high-quality open-source image generation model.
 
@@ -22,7 +22,7 @@ This is a template for a simple web app using [Cloudflare Workers](https://devel
 To create a new Cloudflare Workers project using this repo as a template, run this command:
 
 ```bash
-npm create cloudflare@latest -- cloudflare-replicate-demo --template zeke/getting-started-cloudflare-workers
+npm create cloudflare@latest -- cloudflare-replicate-demo --template replicate/getting-started-cloudflare-workers
 ```
 
 This will run you through an interactive series of prompts to create a new project, create a Git repository, install dependencies, and optionally deploy it to Cloudflare.
