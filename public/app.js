@@ -38,7 +38,6 @@ const ImageGenerator = () => {
         prompt,
         timestamp: new Date().toLocaleTimeString()
       }, ...prevImages]);
-      setPrompt(''); // Clear the input after successful generation
     } catch (error) {
       console.error('Error generating image:', error);
     } finally {
