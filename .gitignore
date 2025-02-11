@@ -1,0 +1,5 @@
+.dev.vars
+.env
+.npmrc
+.wrangler
+package-lock.json
