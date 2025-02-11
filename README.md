@@ -2,6 +2,12 @@
 
 This is a basic example app that uses [Cloudflare Workers](https://developers.cloudflare.com/workers/), [Hono](https://honojs.dev/), and [Replicate](https://replicate.com/) to generate images using Flux, a fast and high-quality open-source image generation model.
 
+## Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/)
+- [Cloudflare account](https://dash.cloudflare.com)
+- [Replicate account](https://replicate.com)
+
 ## Development
 
 To get started running this locally, you'll need to create a [Replicate API token](https://replicate.com/account/api-tokens) and copy it to a `.dev.vars` file.
