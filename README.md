@@ -1,11 +1,10 @@
 # Cloudflare + Hono + Replicate 
 
-This is a template for a simple web app using [Cloudflare Workers](https://developers.cloudflare.com/workers/), [Hono]
-(https://honojs.dev/), and [Replicate](https://replicate.com/) to generate images using [Flux Schnell](https://replicate.com/black-forest-labs/flux-schnell), a fast and high-quality open-source image generation model.
+This is a template for a simple web app using [Cloudflare Workers](https://developers.cloudflare.com/workers/), [Hono](https://honojs.dev/), and [Replicate](https://replicate.com/) to generate images using [Flux Schnell](https://replicate.com/black-forest-labs/flux-schnell), a fast and high-quality open-source image generation model.
 
 ![screenshot](https://github.com/user-attachments/assets/f123b271-09a1-468c-9aac-5fdd4ed75184)
 
-## Tech stack
+## Stack
 
 - [Cloudflare Workers](https://developers.cloudflare.com/workers/) is a serverless platform for building web applications. You can run "serverless" functions in a Node.js-like environment, plus serve static web pages and assets.
 - [Hono](https://honojs.dev/) is a minimalist web framework for building serverless applications. It's built and maintained by Cloudflare.
@@ -20,7 +19,7 @@ This is a template for a simple web app using [Cloudflare Workers](https://devel
 
 ## Getting started
 
-To create a new Cloudflare Workers project using this repo as a template, run the following command:
+To create a new Cloudflare Workers project using this repo as a template, run this command:
 
 ```bash
 npm create cloudflare@latest -- cloudflare-replicate-demo --template zeke/getting-started-cloudflare-workers
